@@ -12,6 +12,18 @@ To grade, run `bundle install` (requires rspec), then `rake`.
 I used a Fibonacci Sequence generator I found on the internet (source URL in the comments). My logic is that greater minds than mine have been at work on that problem, so I should take advantage of their work. That said, I did write test cases to ensure the generator behaved as it should.
 
 
+Usage
+-----
+
+First install the gem, then:
+
+    require 'rubygems'
+    require 'closest_fibonacci'
+    
+    12345.closest_fibonacci
+    # 10946
+
+
 To-do
 -----
 
