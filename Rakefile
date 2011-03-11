@@ -15,14 +15,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "closest_fibonacci"
   gem.homepage = "http://github.com/tfe/closest_fibonacci"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Finds the largest integer value from the Fibonacci Sequence smaller than the given integer.}
+  gem.description = %Q{Extends the Fixnum class to provide a closest_fibonacci method, returning the largest integer value from the Fibonacci Sequence smaller than the given integer.}
   gem.email = "todd@toddeichel.com"
   gem.authors = ["Todd Eichel"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -30,6 +26,7 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
+  spec.rspec_opts = ['--format doc', '--color']
 end
 
 RSpec::Core::RakeTask.new(:rcov) do |spec|
